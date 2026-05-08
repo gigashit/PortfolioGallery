@@ -20,9 +20,12 @@ public class ThirdPersonCamera : MonoBehaviour
 
     private Vector3 currentVelocity;
 
+    private Browser browserScript;
+
     private void Awake()
     {
         inputActions = new InputSystem_Actions();
+        browserScript = FindAnyObjectByType<Browser>();
     }
 
     private void OnEnable()
@@ -45,15 +48,19 @@ public class ThirdPersonCamera : MonoBehaviour
 
     private void HandleCamera()
     {
-        yaw += lookInput.x * sensitivity;
-        pitch -= lookInput.y * sensitivity;
-        pitch = Mathf.Clamp(pitch, minY, maxY);
+        if (!browserScript.isBrowserOn)
+        {
+            yaw += lookInput.x * sensitivity;
+            pitch -= lookInput.y * sensitivity;
+            pitch = Mathf.Clamp(pitch, minY, maxY);
 
-        Quaternion rotation = Quaternion.Euler(pitch, yaw, 0);
+            Quaternion rotation = Quaternion.Euler(pitch, yaw, 0);
 
-        Vector3 targetPosition = target.position - rotation * Vector3.forward * distance;
+            Vector3 targetPosition = target.position - rotation * Vector3.forward * distance;
 
-        transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref currentVelocity, smoothTime);
-        transform.LookAt(target.position);
+            transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref currentVelocity, smoothTime);
+            transform.LookAt(target.position);
+        }
+
     }
 }

@@ -25,9 +25,12 @@ public class ThirdPersonController : MonoBehaviour
 
     private float verticalVelocity;
 
+    private Browser browserScript;
+
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
+        browserScript = FindAnyObjectByType<Browser>();
         inputActions = new InputSystem_Actions();
     }
 
@@ -67,34 +70,37 @@ public class ThirdPersonController : MonoBehaviour
             verticalVelocity = groundedOffset;
         }
 
-        // Movement direction relative to camera
-        Vector3 camForward = cameraTransform.forward;
-        Vector3 camRight = cameraTransform.right;
-
-        camForward.y = 0;
-        camRight.y = 0;
-
-        camForward.Normalize();
-        camRight.Normalize();
-
-        Vector3 moveDirection = camForward * moveInput.y + camRight * moveInput.x;
-
-        if (moveDirection.magnitude > 0.1f)
+        if (!browserScript.isBrowserOn)
         {
-            // Rotate character toward movement direction
-            Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+            // Movement direction relative to camera
+            Vector3 camForward = cameraTransform.forward;
+            Vector3 camRight = cameraTransform.right;
+
+            camForward.y = 0;
+            camRight.y = 0;
+
+            camForward.Normalize();
+            camRight.Normalize();
+
+            Vector3 moveDirection = camForward * moveInput.y + camRight * moveInput.x;
+
+            if (moveDirection.magnitude > 0.1f)
+            {
+                // Rotate character toward movement direction
+                Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+            }
+
+            float speed = isRunning ? runSpeed : walkSpeed;
+
+            Vector3 horizontalVelocity = moveDirection * speed;
+
+            // Gravity
+            verticalVelocity += gravity * Time.deltaTime;
+
+            Vector3 velocity = horizontalVelocity + Vector3.up * verticalVelocity;
+
+            controller.Move(velocity * Time.deltaTime);
         }
-
-        float speed = isRunning ? runSpeed : walkSpeed;
-
-        Vector3 horizontalVelocity = moveDirection * speed;
-
-        // Gravity
-        verticalVelocity += gravity * Time.deltaTime;
-
-        Vector3 velocity = horizontalVelocity + Vector3.up * verticalVelocity;
-
-        controller.Move(velocity * Time.deltaTime);
     }
 }
