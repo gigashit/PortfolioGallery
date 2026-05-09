@@ -17,8 +17,18 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private Button playModeButton;
     [SerializeField] private Button browseModeButton;
+    [SerializeField] private Button nextExhibitButton;
+    [SerializeField] private Button previousExhibitButton;
+
+    [Header("Browser UI Text Fields")]
+
+    [SerializeField] private TMP_Text headerText;
+    [SerializeField] private TMP_Text titleText;
+    [SerializeField] private TMP_Text descriptionText;
 
     private Browser browserScript;
+
+    [HideInInspector] public bool inMainMenu = true;
 
     private void Start()
     {
@@ -29,16 +39,20 @@ public class UIManager : MonoBehaviour
         browseModeUIParent.SetActive(false);
 
         browserScript.isBrowserOn = true;
+        inMainMenu = true;
 
         playModeButton.onClick.AddListener(StartPlayMode);
         browseModeButton.onClick.AddListener(StartBrowseMode);
+        nextExhibitButton.onClick.AddListener(NextExhibit);
+        previousExhibitButton.onClick.AddListener(PreviousExhibit);
 
         ToggleCursor(true);
     }
 
-    private void StartPlayMode()
+    public void StartPlayMode()
     {
         mainMenuParent.SetActive(false);
+        browseModeUIParent.SetActive(false);
 
         FadeInUIElements(playModeUIParent);
 
@@ -47,19 +61,59 @@ public class UIManager : MonoBehaviour
         ToggleCursor(false);
 
         browserScript.isBrowserOn = false;
+
+        inMainMenu = false;
     }
 
-    private void StartBrowseMode()
+    public void StartBrowseMode()
     {
         mainMenuParent.SetActive(false);
-
-        FadeInUIElements(browseModeUIParent);
+        playModeUIParent.SetActive(false);
 
         browseModeUIParent.SetActive(true);
 
         browserScript.ShowExhibit();
 
         ToggleCursor(true);
+
+        inMainMenu = false;
+    }
+
+    private void NextExhibit()
+    {
+        if (browserScript.currentExhibitIndex == browserScript.exhibits.Count - 1)
+        {
+            browserScript.currentExhibitIndex = 0;
+        }
+        else
+        {
+            browserScript.currentExhibitIndex++;
+        }
+
+        browserScript.ShowExhibit();
+    }
+
+    private void PreviousExhibit()
+    {
+        if (browserScript.currentExhibitIndex == 0)
+        {
+            browserScript.currentExhibitIndex = browserScript.exhibits.Count - 1;
+        }
+        else
+        {
+            browserScript.currentExhibitIndex--;
+        }
+
+        browserScript.ShowExhibit();
+    }
+
+    public void ShowExhibitUI(Exhibit exhibit)
+    {
+        headerText.text = exhibit.header;
+        titleText.text = exhibit.title;
+        descriptionText.text = exhibit.description;
+
+        FadeInUIElements(browseModeUIParent);
     }
 
     private void ToggleCursor(bool show)
@@ -70,6 +124,8 @@ public class UIManager : MonoBehaviour
 
     private void FadeInUIElements(GameObject parent)
     {
+        Debug.Log("Fading in UI elements for " + parent.name);
+
         foreach (Transform child in parent.transform)
         {
             TMP_Text text = child.GetComponent<TMP_Text>();
