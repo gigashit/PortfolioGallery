@@ -3001,6 +3001,7 @@ GameObject:
   - component: {fileID: 262306929}
   - component: {fileID: 262306928}
   - component: {fileID: 262306927}
+  - component: {fileID: 262306930}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -3064,6 +3065,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &262306930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262306926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f15431bee5f7db4387894d7f9f7bff6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SettingsManager
+  selectedLanguage: 1
+  uiParent: {fileID: 2038746441}
 --- !u!1001 &281378110
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3199,6 +3214,7 @@ GameObject:
   - component: {fileID: 292478219}
   - component: {fileID: 292478221}
   - component: {fileID: 292478220}
+  - component: {fileID: 292478222}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -3325,6 +3341,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 292478218}
   m_CullTransparentMesh: 1
+--- !u!114 &292478222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292478218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4373844d467e819458e960040fa27ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedTextComponent
+  text: {fileID: 292478220}
+  finnishText: Selaa
+  englishText: Browse Mode
 --- !u!1001 &297121638
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5836,6 +5867,7 @@ GameObject:
   - component: {fileID: 480124246}
   - component: {fileID: 480124248}
   - component: {fileID: 480124247}
+  - component: {fileID: 480124249}
   m_Layer: 5
   m_Name: ReturnText
   m_TagString: Untagged
@@ -5963,6 +5995,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 480124245}
   m_CullTransparentMesh: 1
+--- !u!114 &480124249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480124245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4373844d467e819458e960040fa27ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedTextComponent
+  text: {fileID: 480124247}
+  finnishText: Palaa
+  englishText: Return
 --- !u!1001 &480351748
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10859,6 +10906,7 @@ GameObject:
   - component: {fileID: 849486388}
   - component: {fileID: 849486390}
   - component: {fileID: 849486389}
+  - component: {fileID: 849486391}
   m_Layer: 5
   m_Name: LookText
   m_TagString: Untagged
@@ -10986,6 +11034,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 849486387}
   m_CullTransparentMesh: 1
+--- !u!114 &849486391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849486387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4373844d467e819458e960040fa27ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedTextComponent
+  text: {fileID: 849486389}
+  finnishText: "K\xE4\xE4nn\xE4"
+  englishText: Look
 --- !u!1 &849532589
 GameObject:
   m_ObjectHideFlags: 0
@@ -15611,6 +15674,7 @@ GameObject:
   - component: {fileID: 1205510045}
   - component: {fileID: 1205510047}
   - component: {fileID: 1205510046}
+  - component: {fileID: 1205510048}
   m_Layer: 5
   m_Name: MoveText
   m_TagString: Untagged
@@ -15739,6 +15803,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1205510044}
   m_CullTransparentMesh: 1
+--- !u!114 &1205510048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205510044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4373844d467e819458e960040fa27ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedTextComponent
+  text: {fileID: 1205510046}
+  finnishText: Liiku
+  englishText: Move
 --- !u!1001 &1208952411
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19124,6 +19203,7 @@ GameObject:
   - component: {fileID: 1473621343}
   - component: {fileID: 1473621345}
   - component: {fileID: 1473621344}
+  - component: {fileID: 1473621346}
   m_Layer: 5
   m_Name: BrowseModeText
   m_TagString: Untagged
@@ -19251,6 +19331,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1473621342}
   m_CullTransparentMesh: 1
+--- !u!114 &1473621346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1473621342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4373844d467e819458e960040fa27ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedTextComponent
+  text: {fileID: 1473621344}
+  finnishText: Selaa
+  englishText: Browse Mode
 --- !u!1001 &1485757310
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19448,6 +19543,7 @@ GameObject:
   - component: {fileID: 1493496220}
   - component: {fileID: 1493496222}
   - component: {fileID: 1493496221}
+  - component: {fileID: 1493496223}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -19521,11 +19617,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
+  m_fontSize: 33.45
   m_fontSizeBase: 30
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 16
   m_fontSizeMax: 72
   m_fontStyle: 1
   m_HorizontalAlignment: 2
@@ -19560,7 +19656,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 13.611557, z: 0, w: 0}
+  m_margin: {x: 11.245529, y: 13.611557, z: 11.90826, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -19574,6 +19670,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1493496219}
   m_CullTransparentMesh: 1
+--- !u!114 &1493496223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493496219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4373844d467e819458e960040fa27ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedTextComponent
+  text: {fileID: 1493496221}
+  finnishText: Seuraava
+  englishText: Next
 --- !u!1001 &1494284133
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21037,6 +21148,7 @@ GameObject:
   - component: {fileID: 1626085108}
   - component: {fileID: 1626085110}
   - component: {fileID: 1626085109}
+  - component: {fileID: 1626085111}
   m_Layer: 5
   m_Name: ButtonDescription
   m_TagString: Untagged
@@ -21165,6 +21277,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1626085107}
   m_CullTransparentMesh: 1
+--- !u!114 &1626085111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1626085107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4373844d467e819458e960040fa27ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedTextComponent
+  text: {fileID: 1626085109}
+  finnishText: Selaa kohteita, jos sinulla on kiire
+  englishText: Browse through the exhibits if you're in a rush
 --- !u!1001 &1630669239
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23290,6 +23417,7 @@ GameObject:
   - component: {fileID: 1799033108}
   - component: {fileID: 1799033110}
   - component: {fileID: 1799033109}
+  - component: {fileID: 1799033111}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -23416,6 +23544,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1799033107}
   m_CullTransparentMesh: 1
+--- !u!114 &1799033111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799033107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4373844d467e819458e960040fa27ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedTextComponent
+  text: {fileID: 1799033109}
+  finnishText: Pelaa
+  englishText: Play Mode
 --- !u!1001 &1803303646
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23613,6 +23756,7 @@ GameObject:
   - component: {fileID: 1809897747}
   - component: {fileID: 1809897749}
   - component: {fileID: 1809897748}
+  - component: {fileID: 1809897750}
   m_Layer: 5
   m_Name: ButtonDescription
   m_TagString: Untagged
@@ -23741,6 +23885,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1809897746}
   m_CullTransparentMesh: 1
+--- !u!114 &1809897750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1809897746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4373844d467e819458e960040fa27ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedTextComponent
+  text: {fileID: 1809897748}
+  finnishText: "Tutki n\xE4yttely\xE4 jalan, omaan tahtiisi"
+  englishText: Explore the showcase on foot at your own pace
 --- !u!1 &1816486823
 GameObject:
   m_ObjectHideFlags: 0
@@ -24318,6 +24477,7 @@ GameObject:
   - component: {fileID: 1838197680}
   - component: {fileID: 1838197682}
   - component: {fileID: 1838197681}
+  - component: {fileID: 1838197683}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -24364,7 +24524,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Back
+  m_text: Edellinen
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b6f8b959d969f22448d1e0c9b710e960, type: 2}
   m_sharedMaterial: {fileID: 8344692603234317254, guid: b6f8b959d969f22448d1e0c9b710e960, type: 2}
@@ -24391,11 +24551,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
+  m_fontSize: 16.5
   m_fontSizeBase: 30
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 16
   m_fontSizeMax: 72
   m_fontStyle: 1
   m_HorizontalAlignment: 2
@@ -24430,7 +24590,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 13.611557, z: 0, w: 0}
+  m_margin: {x: 13.335648, y: 13.611557, z: 13.333698, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -24444,6 +24604,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1838197679}
   m_CullTransparentMesh: 1
+--- !u!114 &1838197683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838197679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4373844d467e819458e960040fa27ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedTextComponent
+  text: {fileID: 1838197681}
+  finnishText: Edellinen
+  englishText: Back
 --- !u!1001 &1840569965
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26617,6 +26792,7 @@ GameObject:
   - component: {fileID: 2042062380}
   - component: {fileID: 2042062382}
   - component: {fileID: 2042062381}
+  - component: {fileID: 2042062383}
   m_Layer: 5
   m_Name: WelcomeTitle
   m_TagString: Untagged
@@ -26743,6 +26919,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2042062379}
   m_CullTransparentMesh: 1
+--- !u!114 &2042062383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042062379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4373844d467e819458e960040fa27ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedTextComponent
+  text: {fileID: 2042062381}
+  finnishText: "Pelattava Portfolio-N\xE4yttely"
+  englishText: Interactive Portfolio Showcase
 --- !u!1001 &2046559494
 PrefabInstance:
   m_ObjectHideFlags: 0
